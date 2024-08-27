@@ -1,0 +1,5 @@
+# Ignora todas as pastas node_modules em qualquer nível
+node_modules/
+
+# Ignora todos os arquivos .DS_Store em qualquer nível
+.DS_Store

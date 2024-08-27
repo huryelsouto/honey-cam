@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "name": "admin",
+        "password": "admin",
+        "passwordHash": "$2a$12$VPzUT7eowb4QwGUaUl9iiu5dJgvI42wzDW6/0ku2CvTPGDwjEDkRu"
+    },
+    {
+        "id": 2,
+        "name": "user",
+        "password": "user",
+        "passwordHash": "$2a$12$E.rOQRQVL22Bs0zM.Hz0w.LeLl3m2Z7bViDI7AuM8nSpoWkrM3WG."
+    }
+]
