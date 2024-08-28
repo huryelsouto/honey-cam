@@ -10,3 +10,23 @@
 {"message":"secret option required for sessions","level":"error","timestamp":"2024-08-27 20:05:56"}
 {"message":"secret option required for sessions","level":"error","timestamp":"2024-08-27 20:07:14"}
 {"message":"secret option required for sessions","level":"error","timestamp":"2024-08-27 20:07:16"}
+{"message":{"path":"/","method":"GET","body":{},"ip":"::1"},"level":"info","timestamp":"2024-08-27 21:00:38"}
+{"message":{"path":"/login","method":"GET","body":{},"ip":"::1"},"level":"info","timestamp":"2024-08-27 21:00:38"}
+{"message":{"path":"/login","method":"POST","body":{"username":"admin","password":"admin"},"ip":"::1"},"level":"info","timestamp":"2024-08-27 21:00:40"}
+{"message":{"path":"/","method":"GET","body":{},"ip":"::1"},"level":"info","timestamp":"2024-08-27 21:00:41"}
+{"message":{"path":"/","method":"GET","body":{},"ip":"::1"},"level":"info","timestamp":"2024-08-27 21:01:27"}
+{"message":{"path":"/login","method":"GET","body":{},"ip":"::1"},"level":"info","timestamp":"2024-08-27 21:01:27"}
+{"message":{"path":"/login","method":"POST","body":{"username":"admin","password":"admin"},"ip":"::1"},"level":"info","timestamp":"2024-08-27 21:01:28"}
+{"message":{"path":"/","method":"GET","body":{},"ip":"::1"},"level":"info","timestamp":"2024-08-27 21:01:29"}
+{"message":{"path":"/","method":"GET","body":{},"ip":"::1"},"level":"info","timestamp":"2024-08-27 21:12:54"}
+{"message":{"path":"/login","method":"GET","body":{},"ip":"::1"},"level":"info","timestamp":"2024-08-27 21:12:55"}
+{"message":{"path":"/login","method":"POST","body":{"username":"admin","password":"admin"},"ip":"::1"},"level":"info","timestamp":"2024-08-27 21:12:57"}
+{"message":{"path":"/","method":"GET","body":{},"ip":"::1"},"level":"info","timestamp":"2024-08-27 21:12:58"}
+{"message":{"path":"/login","method":"GET","body":{},"ip":"::1"},"level":"info","timestamp":"2024-08-27 21:14:31"}
+{"message":{"path":"/login","method":"POST","body":{"username":"superadmin","password":"superadmin"},"ip":"::1"},"level":"info","timestamp":"2024-08-27 21:14:43"}
+{"message":{"path":"/login","method":"POST","body":{"username":"superadmin","password":"superadmin"},"ip":"::1"},"level":"info","timestamp":"2024-08-27 21:14:47"}
+{"message":{"path":"/login","method":"POST","body":{"username":"superadmin","password":"superadmin"},"ip":"::1"},"level":"info","timestamp":"2024-08-27 21:14:53"}
+{"message":{"path":"/login","method":"POST","body":{"username":"superadmin","password":"superadmin"},"ip":"::1"},"level":"info","timestamp":"2024-08-27 21:15:07"}
+{"message":{"path":"/login","method":"POST","body":{"username":"superadmin","password":"superadmin"},"ip":"::1"},"level":"info","timestamp":"2024-08-27 21:15:08"}
+{"message":{"path":"/login","method":"POST","body":{"username":"user","password":"user"},"ip":"::1"},"level":"info","timestamp":"2024-08-27 21:15:14"}
+{"message":{"path":"/","method":"GET","body":{},"ip":"::1"},"level":"info","timestamp":"2024-08-27 21:15:15"}
