@@ -1,5 +1,5 @@
-const brandImagePath = "";  // Define this variable as needed
-const brandImageWidth = ""; // Define this variable as needed
+const brandImagePath = "../brands/Hikvision.png";  // Define this variable as needed
+const brandImageWidth = 600; // Define this variable as needed
 const rtspAddress = "";     // Define this variable as needed
 const userName = "";        // Define this variable as needed
 
@@ -14,12 +14,12 @@ let camera, scene, renderer;
 let lon = 0, lat = 0, phi = 0, theta = 0;
 let onPointerDownPointerX = 0, onPointerDownPointerY = 0;
 let onPointerDownLon = 0, onPointerDownLat = 0;
-const imgPath = '';  // Define the image path
+const imgPath = '../images/img.png';  // Define the image path
 const distance = 50;
 
-let xRotationAngle = 0;  // Define this variable as needed
-let yRotationAngle = 0;  // Define this variable as needed
-let timeout = 0;         // Define this variable as needed
+let xRotationAngle = 1;  // Define this variable as needed
+let yRotationAngle = 1;  // Define this variable as needed
+let timeout = 20;         // Define this variable as needed
 let width = 1;           // Define this variable as needed
 let height = 1;          // Define this variable as needed
 let zoomRatio = 1;       // Define this variable as needed
@@ -93,7 +93,7 @@ function rotateDown() {
 
 function zoomIn() {
     setTimeout(() => {
-        const fov = camera.fov + -zoomRatio * 0.05;
+        const fov = camera.fov + -zoomRatio * 5;
         camera.fov = THREE.MathUtils.clamp(fov, 10, 75);
         camera.updateProjectionMatrix();
     }, timeout);
@@ -101,7 +101,7 @@ function zoomIn() {
 
 function zoomOut() {
     setTimeout(() => {
-        const fov = camera.fov + zoomRatio * 0.05;
+        const fov = camera.fov + zoomRatio * 5;
         camera.fov = THREE.MathUtils.clamp(fov, 10, 75);
         camera.updateProjectionMatrix();
     }, timeout);

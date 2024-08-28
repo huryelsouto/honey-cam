@@ -1,13 +1,13 @@
-const videoPathWebm = "";  // Define this variable as needed
-const videoPathMp4 = "";   // Define this variable as needed
-const brandImagePath = ""; // Define this variable as needed
-const brandImageWidth = ""; // Define this variable as needed
+const videoPathWebm = "../videos/pano.webm";  // Define this variable as needed
+const videoPathMp4 = "../videos/pano.mp4";   // Define this variable as needed
+const brandImagePath = "../brands/Hikvision.png";  // Define this variable as needed
+const brandImageWidth = 600; // Define this variable as needed
 const userName = "";       // Define this variable as needed
 
 document.getElementById('brand_image').src = brandImagePath;
 document.getElementById('brand_image').width = brandImageWidth;
-document.querySelector('video source[type="video/webm"]').src = videoPathWebm;
-document.querySelector('video source[type="video/mp4"]').src = videoPathMp4;
+document.getElementById('video-mp4').src = videoPathMp4;
+//document.querySelector('video source[type="video/webm"]').src = videoPathWebm;
 document.getElementById('userName').innerText = userName;
 
 import * as THREE from 'three';
@@ -18,10 +18,9 @@ let onPointerDownPointerX = 0, onPointerDownPointerY = 0;
 let onPointerDownLon = 0, onPointerDownLat = 0;
 
 const distance = 50;
-let xRotationAngle = 0;  // Define this variable as needed
-let yRotationAngle = 0;  // Define this variable as needed
-let timeout = 0;         // Define this variable as needed
-let width = 1;           // Define this variable as needed
+let xRotationAngle = 1;  // Define this variable as needed
+let yRotationAngle = 1;  // Define this variable as needed
+let timeout = 20;         // Define this variable as neededlet width = 1;           // Define this variable as needed
 let height = 1;          // Define this variable as needed
 let zoomRatio = 82;
 
@@ -92,7 +91,7 @@ function rotateDown() {
 
 function zoomIn() {
     setTimeout(() => {
-        const fov = camera.fov + -zoomRatio * 0.05;
+        const fov = camera.fov + -zoomRatio * 5;
         camera.fov = THREE.MathUtils.clamp(fov, 10, 75);
         camera.updateProjectionMatrix();
     }, timeout);
@@ -100,7 +99,7 @@ function zoomIn() {
 
 function zoomOut() {
     setTimeout(() => {
-        const fov = camera.fov + zoomRatio * 0.05;
+        const fov = camera.fov + zoomRatio * 5;
         camera.fov = THREE.MathUtils.clamp(fov, 10, 75);
         camera.updateProjectionMatrix();
     }, timeout);
