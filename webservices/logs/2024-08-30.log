@@ -1,0 +1,4 @@
+{"message":{"path":"/","method":"GET","body":{},"ip":"::1"},"level":"info","timestamp":"2024-08-30 11:38:34"}
+{"message":{"path":"/login","method":"GET","body":{},"ip":"::1"},"level":"info","timestamp":"2024-08-30 11:38:34"}
+{"message":{"path":"/login","method":"POST","body":{"username":"admin","password":"admin"},"ip":"::1"},"level":"info","timestamp":"2024-08-30 11:38:37"}
+{"message":{"path":"/","method":"GET","body":{},"ip":"::1"},"level":"info","timestamp":"2024-08-30 11:38:37"}
