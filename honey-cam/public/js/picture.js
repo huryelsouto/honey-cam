@@ -1,10 +1,15 @@
-const brandImagePath = "../brands/Hikvision.png";  // Define this variable as needed
-const brandImageWidth = 600; // Define this variable as needed
-const rtspAddress = "";     // Define this variable as needed
-const userName = "";        // Define this variable as needed
+import { readJson } from '../js/utils/json-manipulator.js';
+
+const camConfigs = await readJson('../config/cam-picture.json');
+const brandConfigs = await readJson('../config/brand.json');
+
+const brandImagePath = brandConfigs.brandImagePath;  // Define this variable as needed
+const brandImageWidth = brandConfigs.brandImageWidth; // Define this variable as needed
+const rtspAddress = camConfigs.rtspAddress;     // Define this variable as needed
+const userName = "Não Tem";        // Define this variable as needed
 
 document.getElementById('brand_image').src = brandImagePath;
-document.getElementById('brand_image').width = brandImageWidth;
+document.getElementById('brand_image').style.width = brandImageWidth;
 document.getElementById('rtspAddress').innerText = rtspAddress;
 document.getElementById('userName').innerText = userName;
 
@@ -14,15 +19,15 @@ let camera, scene, renderer;
 let lon = 0, lat = 0, phi = 0, theta = 0;
 let onPointerDownPointerX = 0, onPointerDownPointerY = 0;
 let onPointerDownLon = 0, onPointerDownLat = 0;
-const imgPath = '../images/img.png';  // Define the image path
+const imgPath = camConfigs.imgPath;  // Define the image path
 const distance = 50;
 
-let xRotationAngle = 1;  // Define this variable as needed
-let yRotationAngle = 1;  // Define this variable as needed
-let timeout = 20;         // Define this variable as needed
-let width = 1;           // Define this variable as needed
-let height = 1;          // Define this variable as needed
-let zoomRatio = 1;       // Define this variable as needed
+let xRotationAngle = camConfigs.xRotationAngle;  // Define this variable as needed
+let yRotationAngle = camConfigs.yRotationAngle;  // Define this variable as needed
+let timeout = camConfigs.timeout;         // Define this variable as needed
+let width = camConfigs.width;           // Define this variable as needed
+let height = camConfigs.height;          // Define this variable as needed
+let zoomRatio = camConfigs.zoomRatio;       // Define this variable as needed
 
 init();
 animate();

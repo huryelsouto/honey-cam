@@ -17,10 +17,11 @@ $request = preg_replace('#^/api/router.php#', '', $request);
 
 // Roteamento básico
 switch ($request) {
-    case '/':
-        http_response_code(404);
-        echo json_encode(['error' => 'main route']);
-        //mainRoute();
+    case '/camera':
+        $cam_configs = mainRoute();
+
+        http_response_code(200);
+        echo json_encode($cam_configs);
         break;
     case '/login':
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {

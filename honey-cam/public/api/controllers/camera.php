@@ -8,33 +8,27 @@ session_start();
 // // Variável para armazenar o momento em que o processo de login começou
 $beginTimeOfLogin = 0;
 
-// // Rota principal que determina se o usuário será redirecionado para a visualização de vídeo ou imagem com base na configuração atual do serviço
-// function mainRoute()
-// {
-//     global $beginTimeOfLogin;
+// Rota principal que determina se o usuário será redirecionado para a visualização de vídeo ou imagem com base na configuração atual do serviço
+function mainRoute()
+{
+    global $beginTimeOfLogin;
 
-//     // Obtém o tipo de mídia atual (vídeo ou imagem)
-//     $medium = getMedium();
+    // Obtém o tipo de mídia atual (vídeo ou imagem)
+    $medium = getMedium();
 
-//     // Se a mídia for vídeo
-//     if ($medium === "video") {
-//         $config = array_merge(getCamVideoConfig(), getBrandConfig(), ["userName" => $_SESSION['username']]);
-//         include '/views/video.html';
-//     }
-//     // Se a mídia for imagem
-//     elseif ($medium === "picture") {
-//         // Configura o objeto de configuração para a visualização de imagem
-//         $config = array_merge(getCamPictureConfig(), getBrandConfig(), ["userName" => $_SESSION['username']]);
-//         // Renderiza a visualização de imagem passando as configurações
-//         include '/views/picture.html';
-//     }
-// }
-
-// // Rota para exibir a página de login
-// function loginRoute()
-// {
-//     include '/views/login.html';
-// }
+    // Se a mídia for vídeo
+    if ($medium === "video") {
+        $config = array_merge(getCamVideoConfig(), getBrandConfig(), ["userName" => $_SESSION['username']]);
+        include '/views/video.html';
+    }
+    // Se a mídia for imagem
+    elseif ($medium === "picture") {
+        // Configura o objeto de configuração para a visualização de imagem
+        $config = array_merge(getCamPictureConfig(), getBrandConfig(), ["userName" => $_SESSION['username']]);
+        // Renderiza a visualização de imagem passando as configurações
+        return $config;
+    }
+}
 
 // Rota para lidar com o processo de login
 function loginPostRoute($loginData)

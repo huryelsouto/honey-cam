@@ -12,15 +12,25 @@ const login = (event) => {
         username: username,
         password: password
     };
+    const sentDataMock = {
+        username: "admin",
+        password: "admin"
+    };
     // jQuery.post('/api/controllers/log.php', {
     //     username: username,
     //     password: password
     // });
     axios
-        .post('/api/router.php/login', sentData)
+        .post('/api/router.php/login', sentDataMock)
         .then(() => {
             console.log("foiii");
-            // window.location.href = "/";
+            axios
+                .post('/api/router.php/camera')
+                .then(() => console.log('foiii 2'))
+                .catch(error => console.error("Error: " + error));
+
+            window.location.href = "../views/picture.html";
+
         })
         .catch((error) => {
             if (error.response.status === 404) {
