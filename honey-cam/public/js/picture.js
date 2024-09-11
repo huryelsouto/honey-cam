@@ -1,4 +1,22 @@
+import * as THREE from 'three';
 import { readJson } from '../js/utils/json-manipulator.js';
+
+fetch('/api/router.php/auth', {
+    method: 'GET',
+    headers: {
+        'Content-Type': 'application/json',
+    }
+})
+    .then(result => {
+        if (!result.ok) {
+            window.location.href = '../index.html';
+        }
+        return result.json();
+    })
+    .then(data => {
+        document.getElementById('userName').innerText = data.username;
+    })
+    .catch(error => console.error("Error: " + error));
 
 const camConfigs = await readJson('../config/cam-picture.json');
 const brandConfigs = await readJson('../config/brand.json');
@@ -6,14 +24,11 @@ const brandConfigs = await readJson('../config/brand.json');
 const brandImagePath = brandConfigs.brandImagePath;  // Define this variable as needed
 const brandImageWidth = brandConfigs.brandImageWidth; // Define this variable as needed
 const rtspAddress = camConfigs.rtspAddress;     // Define this variable as needed
-const userName = "Não Tem";        // Define this variable as needed
 
 document.getElementById('brand_image').src = brandImagePath;
 document.getElementById('brand_image').style.width = brandImageWidth;
 document.getElementById('rtspAddress').innerText = rtspAddress;
-document.getElementById('userName').innerText = userName;
 
-import * as THREE from 'three';
 
 let camera, scene, renderer;
 let lon = 0, lat = 0, phi = 0, theta = 0;

@@ -1,5 +1,8 @@
 <?php
 require_once __DIR__ . '/controllers/camera.php';
+
+session_start();
+
 // Define o cabeçalho de resposta como JSON
 header('Content-Type: application/json');
 
@@ -17,6 +20,10 @@ $request = preg_replace('#^/api/router.php#', '', $request);
 
 // Roteamento básico
 switch ($request) {
+    case '/auth':
+        $authInfos = auth();
+        echo json_encode($authInfos);
+        break;
     case '/camera':
         $cam_configs = mainRoute();
 

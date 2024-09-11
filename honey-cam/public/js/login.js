@@ -23,14 +23,10 @@ const login = (event) => {
     axios
         .post('/api/router.php/login', sentDataMock)
         .then(() => {
-            console.log("foiii");
             axios
                 .post('/api/router.php/camera')
-                .then(() => console.log('foiii 2'))
+                .then(() => window.location.href = "../views/picture.html")
                 .catch(error => console.error("Error: " + error));
-
-            window.location.href = "../views/picture.html";
-
         })
         .catch((error) => {
             if (error.response.status === 404) {

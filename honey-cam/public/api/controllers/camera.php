@@ -2,9 +2,6 @@
 require_once __DIR__ . '/../services/sweetcam-services.php';
 require_once __DIR__ . '/../services/user-services.php';
 
-// // Inicia a sessão
-session_start();
-
 // // Variável para armazenar o momento em que o processo de login começou
 $beginTimeOfLogin = 0;
 
@@ -28,6 +25,18 @@ function mainRoute()
         // Renderiza a visualização de imagem passando as configurações
         return $config;
     }
+}
+
+function auth()
+{
+    if (isset($_SESSION['authenticated']) && $_SESSION['authenticated']) {
+        http_response_code(200);
+        $authInfos = ['authenticated' => true, 'username' => $_SESSION['username']];
+    } else {
+        http_response_code(404);
+        $authInfos = ['authenticated' => false];
+    }
+    return $authInfos;
 }
 
 // Rota para lidar com o processo de login
@@ -86,17 +95,23 @@ function loginPostRoute($loginData)
         if (password_verify($password, $passwordHash)) {
             // Se as senhas corresponderem, armazena o nome de usuário na sessão e retorna uma mensagem de sucesso
             $_SESSION['username'] = $username;
+            // Login bem-sucedido, iniciar a sessão
+            $_SESSION['authenticated'] = true;
+            $_SESSION['username'] = $username;
             http_response_code(200);
             echo json_encode(["message" => "succeed"]);
+            return $_SESSION;
         } else {
             // Se as senhas não corresponderem, retorna um erro de senha incorreta
             http_response_code(401);
             echo json_encode(["error" => "wrong password"]);
+            return;
         }
     } else {
         // Resposta de erro se os dados estiverem faltando
         echo json_encode($loginData);
         http_response_code(400);
+        return;
     }
 }
 
