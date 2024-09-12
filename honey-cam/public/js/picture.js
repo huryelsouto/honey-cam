@@ -1,23 +1,6 @@
 import * as THREE from 'three';
 import { readJson } from '../js/utils/json-manipulator.js';
 
-fetch('/api/router.php/auth', {
-    method: 'GET',
-    headers: {
-        'Content-Type': 'application/json',
-    }
-})
-    .then(result => {
-        if (!result.ok) {
-            window.location.href = '../index.html';
-        }
-        return result.json();
-    })
-    .then(data => {
-        document.getElementById('userName').innerText = data.username;
-    })
-    .catch(error => console.error("Error: " + error));
-
 const camConfigs = await readJson('../config/cam-picture.json');
 const brandConfigs = await readJson('../config/brand.json');
 

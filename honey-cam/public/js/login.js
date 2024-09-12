@@ -21,12 +21,9 @@ const login = (event) => {
     //     password: password
     // });
     axios
-        .post('/api/router.php/login', sentDataMock)
+        .post('/api/controllers/router.php/login', sentDataMock)
         .then(() => {
-            axios
-                .post('/api/router.php/camera')
-                .then(() => window.location.href = "../views/picture.html")
-                .catch(error => console.error("Error: " + error));
+            window.location.href = "/camera"
         })
         .catch((error) => {
             if (error.response.status === 404) {
