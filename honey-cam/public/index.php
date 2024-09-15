@@ -1,9 +1,13 @@
 <?php
 session_start();
 
-// Função para verificar se o usuário está autenticado
-function checkAuth() {
-    return isset($_SESSION['authenticated']) && $_SESSION['authenticated'];
+function isUserLoggedIn() {
+    // Verifica se a variável de sessão 'user_id' está definida
+    if (isset($_SESSION['username'])) {
+        return true;  // O usuário está logado
+    } else {
+        return false; // O usuário não está logado
+    }
 }
 
 // Capturar a rota da URL
@@ -14,9 +18,9 @@ $protected_routes = ['/camera'];
 
 // Verificar se o caminho é protegido e se o usuário está autenticado
 if (in_array($path, $protected_routes)) {
-    if (!checkAuth()) {
+    if (!isUserLoggedIn()) {
         // Redirecionar para a página de login se o usuário não estiver autenticado
-        header('Location: /views/login.html');
+        header('Location: /');
         exit();
     }
 }

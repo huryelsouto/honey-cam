@@ -2,6 +2,8 @@
 require_once __DIR__ . '/../../index.php';
 require_once __DIR__ . '/camera.php';
 
+session_start();
+
 // Define o cabeçalho de resposta como JSON
 header('Content-Type: application/json');
 
@@ -16,7 +18,7 @@ $request = preg_replace('#^/api/controllers/router.php#', '', $request);
 
 // Roteamento básico
 switch ($request) {
-    case '/login':
+    case '/eu':
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Captura o conteúdo bruto da requisição
             $json = file_get_contents('php://input');

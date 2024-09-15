@@ -1,13 +1,7 @@
-const brandImagePath = "/brands/Hikvision.png";  // Define this variable as needed
-const brandImageWidth = ""; // Define this variable as needed
-
-document.getElementById('brand_image').src = brandImagePath;
-document.getElementById('brand_image').width = brandImageWidth;
-
-const login = (event) => {
+const login = async (event) => {
     event.preventDefault();
-    const username = $("input[name=username]").val();
-    const password = $("input[name=password]").val();
+    const username = document.querySelector('input[name="username"]').value;
+    const password = document.querySelector('input[name="password"]').value;
     const sentData = {
         username: username,
         password: password
@@ -16,28 +10,32 @@ const login = (event) => {
         username: "admin",
         password: "admin"
     };
-    // jQuery.post('/api/controllers/log.php', {
-    //     username: username,
-    //     password: password
-    // });
-    axios
-        .post('/api/controllers/router.php/login', sentDataMock)
-        .then(() => {
-            window.location.href = "/camera"
-        })
-        .catch((error) => {
-            if (error.response.status === 404) {
-                console.log("n foi");
-                $("#usernameErrorMessage").css("display", "inline-block");
-                // setTimeout(() => $("#usernameErrorMessage").css("display", "none"), 3000);
-            }
-            if (error.response.status === 401) {
-                $("#passwordErrorMessage").css("display", "inline-block");
-                setTimeout(() => $("#passwordErrorMessage").css("display", "none"), 3000);
-            }
-            if (error.response.status === 403) {
-                $("#rateErrorMessage").css("display", "inline-block");
-                setTimeout(() => $("#rateErrorMessage").css("display", "none"), 3000);
-            }
-        });
+
+    try {
+        const response = await axios.post('/api/controllers/user-controller/login.php', sentDataMock);
+        console.log(response);
+        console.log(response.data);
+        console.log(response.status);
+        if (response.status === 200 && response.data) {
+            setTimeout(() => {
+                window.location.href = "/camera";  // Redireciona após um pequeno delay
+            }, 500);
+        }
+    } catch (error) {
+        if (error.response && error.response.status === 404) {
+            console.log("n foi");
+            $("#usernameErrorMessage").css("display", "inline-block");
+            // setTimeout(() => $("#usernameErrorMessage").css("display", "none"), 3000);
+        }
+        if (error.response && error.response.status === 401) {
+            $("#passwordErrorMessage").css("display", "inline-block");
+            setTimeout(() => $("#passwordErrorMessage").css("display", "none"), 3000);
+        }
+        if (error.response && error.response.status === 403) {
+            $("#rateErrorMessage").css("display", "inline-block");
+            setTimeout(() => $("#rateErrorMessage").css("display", "none"), 3000);
+        }
+    }
 };
+
+document.getElementById('login-button').onclick = login;

@@ -1,15 +1,9 @@
-import * as THREE from 'three';
+import * as THREE from 'https://unpkg.com/three@0.150.1/build/three.module.js';
 import { readJson } from '../js/utils/json-manipulator.js';
 
 const camConfigs = await readJson('../config/cam-picture.json');
-const brandConfigs = await readJson('../config/brand.json');
-
-const brandImagePath = brandConfigs.brandImagePath;  // Define this variable as needed
-const brandImageWidth = brandConfigs.brandImageWidth; // Define this variable as needed
 const rtspAddress = camConfigs.rtspAddress;     // Define this variable as needed
 
-document.getElementById('brand_image').src = brandImagePath;
-document.getElementById('brand_image').style.width = brandImageWidth;
 document.getElementById('rtspAddress').innerText = rtspAddress;
 
 

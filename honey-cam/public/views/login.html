@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="../css/login.css">
 </head>
+
 <body>
-    <div>
-        <div style="display:inline">
-            <img id="brand_image" src="" width="">
+    <div class="container">
+        <div>
+            <img id="brand_image">
         </div>
         <form>
-            <div class="container">
-                <label for="username">Username</label>
-                <input type="text" placeholder="Enter Username" name="username" required>
-                <span id="usernameErrorMessage" style="font-size:13px; color:red; margin-bottom: 15px; display: none">The username is not found</span>
-                <br>
-                <label for="password">Password</label>
-                <input type="password" placeholder="Enter password" name="password" required>
-                <span id="passwordErrorMessage" style="font-size:13px; color:red; display: none">The password is not correct</span>
-                <span id="rateErrorMessage" style="font-size:13px; color:red; display: none">Login request reached limit, try one minute later</span>
-                <button type="button" onclick="login(event)">Login</button>
-            </div>
+            <label for="username">Username</label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+            <span id="usernameErrorMessage" style="font-size:13px; color:red; margin-bottom: 15px; display: none">The
+                username is not found</span>
+            <br>
+            <label for="password">Password</label>
+            <input type="password" placeholder="Enter password" name="password" required>
+            <span id="passwordErrorMessage" style="font-size:13px; color:red; display: none">The password is not
+                correct</span>
+            <span id="rateErrorMessage" style="font-size:13px; color:red; display: none">Login request reached limit,
+                try one minute later</span>
+            <button id="login-button" type="button" onclick="login(event)">Login</button>
         </form>
     </div>
-    <script src="/js/login.js"></script>
+    <script src="../js/brand.js" type="module"></script>
+    <script src="../js/login.js" type="module"></script>
 </body>
+
 </html>
