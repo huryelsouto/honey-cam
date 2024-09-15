@@ -13,9 +13,6 @@ const login = async (event) => {
 
     try {
         const response = await axios.post('/api/controllers/user-controller/login.php', sentDataMock);
-        console.log(response);
-        console.log(response.data);
-        console.log(response.status);
         if (response.status === 200 && response.data) {
             setTimeout(() => {
                 window.location.href = "/camera";  // Redireciona após um pequeno delay
@@ -23,7 +20,6 @@ const login = async (event) => {
         }
     } catch (error) {
         if (error.response && error.response.status === 404) {
-            console.log("n foi");
             $("#usernameErrorMessage").css("display", "inline-block");
             // setTimeout(() => $("#usernameErrorMessage").css("display", "none"), 3000);
         }

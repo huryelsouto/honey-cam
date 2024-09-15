@@ -25,3 +25,18 @@ canvas {
     margin-left: auto;
     margin-right: auto;
 }
+
+#logout-button {
+    background: none;        /* Remove o fundo */
+    border: none;            /* Remove a borda */
+    color: blue;             /* Cor do texto igual a um link */
+    text-decoration: underline;  /* Sublinha o texto */
+    cursor: pointer;         /* Muda o cursor para "pointer" (mãozinha) */
+    font-size: inherit;      /* Herda o tamanho da fonte do elemento pai */
+    font-family: inherit;    /* Herda a família de fontes */
+    padding: 0;              /* Remove o padding padrão do botão */
+}
+
+#logout-button:hover {
+    color: darkblue;         /* Muda a cor quando o botão é "hovered" */
+}
