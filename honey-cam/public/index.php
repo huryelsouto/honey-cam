@@ -1,7 +1,8 @@
 <?php
 session_start();
 
-function isUserLoggedIn() {
+function isUserLoggedIn()
+{
     // Verifica se a variável de sessão 'user_id' está definida
     if (isset($_SESSION['username'])) {
         return true;  // O usuário está logado
@@ -28,14 +29,17 @@ if (in_array($path, $protected_routes)) {
 // Carregar o conteúdo com base na rota
 switch ($path) {
     case '/':
-        include 'views/login.html';
+        if (isUserLoggedIn()) {
+            header('Location: /camera');
+        } else {
+            include 'views/login.html';
+        }
         break;
     case '/camera':
         include 'views/picture.html';
         break;
     default:
-        http_response_code(404);
-        echo "404 - Página não encontrada: " . htmlspecialchars($path);
+        header('Location: /');
         break;
 }
 ?>
