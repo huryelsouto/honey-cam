@@ -1,5 +1,6 @@
 import * as THREE from 'https://unpkg.com/three@0.150.1/build/three.module.js';
 import { readJson } from '../js/utils/json-manipulator.js';
+import loggerService from '/js/services/LoggerService.js';
 
 const camConfigs = await readJson('../config/cam-picture.json');
 const rtspAddress = camConfigs.rtspAddress;     // Define this variable as needed
@@ -65,40 +66,46 @@ function onPointerDown(event) {
 }
 
 function rotateRight() {
+    loggerService.addLog('rotateRight', '');
     setTimeout(() => {
         lon = xRotationAngle + onPointerDownLon;
     }, timeout);
 }
 
 function rotateLeft() {
+    loggerService.addLog('rotateLeft', '');
     setTimeout(() => {
         lon = -xRotationAngle + onPointerDownLon;
     }, timeout);
 }
 
 function rotateUp() {
+    loggerService.addLog('rotateUp', '');
     setTimeout(() => {
         lat = -yRotationAngle + onPointerDownLat;
     }, timeout);
 }
 
 function rotateDown() {
+    loggerService.addLog('rotateDown', '');
     setTimeout(() => {
         lat = yRotationAngle + onPointerDownLat;
     }, timeout);
 }
 
 function zoomIn() {
+    loggerService.addLog('zoomIn', '');
     setTimeout(() => {
-        const fov = camera.fov + -zoomRatio * 5;
+        const fov = camera.fov + -zoomRatio * 0.05;
         camera.fov = THREE.MathUtils.clamp(fov, 10, 75);
         camera.updateProjectionMatrix();
     }, timeout);
 }
 
 function zoomOut() {
+    loggerService.addLog('zoomOut', '');
     setTimeout(() => {
-        const fov = camera.fov + zoomRatio * 5;
+        const fov = camera.fov + zoomRatio * 0.05;
         camera.fov = THREE.MathUtils.clamp(fov, 10, 75);
         camera.updateProjectionMatrix();
     }, timeout);

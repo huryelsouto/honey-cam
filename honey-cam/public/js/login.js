@@ -1,3 +1,5 @@
+import loggerService from '/js/services/LoggerService.js';
+
 const login = async (event) => {
     event.preventDefault();
     const username = document.querySelector('input[name="username"]').value;
@@ -6,13 +8,14 @@ const login = async (event) => {
         username: username,
         password: password
     };
-    const sentDataMock = {
-        username: "admin",
-        password: "admin"
-    };
+    // const sentDataMock = {
+    //     username: "admin",
+    //     password: "admin"
+    // };
 
     try {
-        const response = await axios.post('/api/controllers/user-controller/login.php', sentDataMock);
+        loggerService.addLog('login', 'POST', sentData, sentData.username);
+        const response = await axios.post('/api/controllers/user-controller/login.php', sentData);
         if (response.status === 200 && response.data) {
             setTimeout(() => {
                 window.location.href = "/camera";  // Redireciona após um pequeno delay
@@ -20,16 +23,16 @@ const login = async (event) => {
         }
     } catch (error) {
         if (error.response && error.response.status === 404) {
-            $("#usernameErrorMessage").css("display", "inline-block");
-            // setTimeout(() => $("#usernameErrorMessage").css("display", "none"), 3000);
+            document.getElementById("usernameErrorMessage").style.display = "inline-block";
+            setTimeout(() => document.getElementById("usernameErrorMessage").style.display = "none", 3000);
         }
         if (error.response && error.response.status === 401) {
-            $("#passwordErrorMessage").css("display", "inline-block");
-            setTimeout(() => $("#passwordErrorMessage").css("display", "none"), 3000);
+            document.getElementById("passwordErrorMessage").style.display = "inline-block";
+            setTimeout(() => document.getElementById("passwordErrorMessage").style.display = "none", 3000);
         }
         if (error.response && error.response.status === 403) {
-            $("#rateErrorMessage").css("display", "inline-block");
-            setTimeout(() => $("#rateErrorMessage").css("display", "none"), 3000);
+            document.getElementById("rateErrorMessage").style.display = "inline-block";
+            setTimeout(() => document.getElementById("rateErrorMessage").style.display = "none", 3000);
         }
     }
 };
