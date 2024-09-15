@@ -1,9 +1,9 @@
 {
-    "timeout": 1000,
+    "timeout": 500,
     "xRotationAngle": 10,
     "yRotationAngle": 10,
-    "width": 0.3,
-    "height": 0.3,
+    "width": 0.5,
+    "height": 0.5,
     "zoomRatio": 82,
     "imgPath": "../images/img.png",
     "rtspAddress": "rtsp://public_ip:554/mystream"
