@@ -1,0 +1,39 @@
+[Sun Oct 06 00:00:04.259431 2024] [lbmethod_heartbeat:notice] [pid 43832:tid 43832] AH02282: No slotmem from mod_heartmonitor
+[Sun Oct 06 00:00:04.260460 2024] [systemd:notice] [pid 43832:tid 43832] SELinux policy enabled; httpd running as context system_u:system_r:httpd_t:s0
+[Sun Oct 06 00:00:04.261768 2024] [mpm_event:notice] [pid 43832:tid 43832] AH00489: Apache/2.4.62 (Amazon Linux) configured -- resuming normal operations
+[Sun Oct 06 00:00:04.261790 2024] [core:notice] [pid 43832:tid 43832] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Sun Oct 06 02:42:24.542722 2024] [core:error] [pid 1296666:tid 1296827] [client 117.186.238.82:45084] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Sun Oct 06 02:42:25.416080 2024] [core:error] [pid 1296665:tid 1296813] [client 117.186.238.82:48898] AH10244: invalid URI path (/cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh)
+[Sun Oct 06 08:20:44.122002 2024] [cgid:error] [pid 1296664:tid 1296769] [client 45.156.129.113:34841] AH01264: stderr from /var/www/cgi-bin/main.pl: script not found or unable to stat
+[Sun Oct 06 08:22:03.032661 2024] [core:error] [pid 1296666:tid 1296818] [client 45.156.129.111:51361] AH10244: invalid URI path (/icons/.%%32%65/.%%32%65/apache2/icons/non-existant-image.png)
+[Sun Oct 06 08:22:03.081386 2024] [core:error] [pid 1296664:tid 1296772] [client 45.156.129.111:50061] AH10244: invalid URI path (/icons/.%2e/%2e%2e/apache2/icons/sphere1.png)
+[Sun Oct 06 08:22:03.130991 2024] [core:error] [pid 1296665:tid 1296807] [client 45.156.129.111:50805] AH10244: invalid URI path (/icons/.%%32%65/.%%32%65/apache2/icons/sphere1.png)
+[Sun Oct 06 08:22:46.577171 2024] [cgid:error] [pid 1310664:tid 1310696] [client 45.156.129.110:60203] AH01264: stderr from /var/www/cgi-bin/authLogin.cgi: script not found or unable to stat
+[Sun Oct 06 19:10:43.942059 2024] [core:error] [pid 1310664:tid 1310716] [client 119.8.162.229:57804] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Sun Oct 06 19:10:46.114204 2024] [core:error] [pid 1310664:tid 1310694] [client 119.8.162.229:53634] AH10244: invalid URI path (/cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh)
+[Mon Oct 07 03:34:56.946225 2024] [cgid:error] [pid 1310664:tid 1310694] [client 193.34.214.123:43658] AH01264: stderr from /var/www/cgi-bin/slogin: script not found or unable to stat
+[Mon Oct 07 14:46:09.270431 2024] [proxy_fcgi:error] [pid 1310664:tid 1310697] (70008)Partial results are valid but processing is incomplete: [client 117.207.153.84:58495] AH01075: Error dispatching request to : (reading input brigade)
+[Tue Oct 08 07:34:55.361206 2024] [core:error] [pid 1310664:tid 1310700] [client 206.189.233.163:60084] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Tue Oct 08 07:34:56.550761 2024] [core:error] [pid 1310664:tid 1310702] [client 206.189.233.163:60088] AH10244: invalid URI path (/cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh)
+[Tue Oct 08 14:41:24.343430 2024] [cgid:error] [pid 1310664:tid 1310713] [client 185.224.128.67:39594] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Tue Oct 08 14:41:43.609804 2024] [cgid:error] [pid 1310664:tid 1310716] [client 185.224.128.67:58684] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Tue Oct 08 20:01:00.406912 2024] [core:error] [pid 1310664:tid 1310709] [client 185.125.95.109:54770] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Tue Oct 08 20:01:01.872838 2024] [core:error] [pid 1310664:tid 1310711] [client 185.125.95.109:54774] AH10244: invalid URI path (/cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh)
+[Wed Oct 09 01:09:15.321664 2024] [core:error] [pid 1310664:tid 1310708] [client 3.1.49.163:58758] AH10244: invalid URI path (/../js/brand.js)
+[Wed Oct 09 01:09:15.406640 2024] [core:error] [pid 1296666:tid 1296822] [client 3.1.49.163:58760] AH10244: invalid URI path (/../js/login.js)
+[Wed Oct 09 11:33:26.263019 2024] [core:error] [pid 1310664:tid 1310694] [client 120.195.30.140:42824] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Wed Oct 09 11:33:26.861602 2024] [core:error] [pid 1296666:tid 1296839] [client 120.195.30.140:43108] AH10244: invalid URI path (/cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh)
+[Thu Oct 10 07:47:59.784078 2024] [cgid:error] [pid 1310664:tid 1310696] [client 185.224.128.83:40014] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Fri Oct 11 02:54:24.711638 2024] [cgid:error] [pid 1310664:tid 1310701] [client 185.224.128.67:58730] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Fri Oct 11 12:24:31.097819 2024] [proxy_fcgi:error] [pid 1310664:tid 1310707] (70008)Partial results are valid but processing is incomplete: [client 120.61.72.158:44031] AH01075: Error dispatching request to : (reading input brigade)
+[Fri Oct 11 14:10:38.902197 2024] [core:error] [pid 1310664:tid 1310692] [client 47.237.94.64:49290] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Fri Oct 11 14:10:40.084105 2024] [core:error] [pid 1310664:tid 1310697] [client 47.237.94.64:49292] AH10244: invalid URI path (/cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh)
+[Fri Oct 11 22:14:18.559672 2024] [proxy_fcgi:error] [pid 1310664:tid 1310709] (70008)Partial results are valid but processing is incomplete: [client 59.97.125.147:38946] AH01075: Error dispatching request to : (reading input brigade)
+[Fri Oct 11 22:18:13.254800 2024] [proxy_fcgi:error] [pid 1310664:tid 1310695] (70008)Partial results are valid but processing is incomplete: [client 113.247.132.251:12331] AH01075: Error dispatching request to : (reading input brigade)
+[Fri Oct 11 23:35:21.996662 2024] [core:error] [pid 1310664:tid 1310716] [client 75.119.137.55:56836] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Fri Oct 11 23:35:22.420364 2024] [core:error] [pid 1296666:tid 1296821] [client 75.119.137.55:56844] AH10244: invalid URI path (/cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh)
+[Sat Oct 12 02:39:18.219047 2024] [core:error] [pid 1310664:tid 1310703] [client 47.236.156.253:45452] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Sat Oct 12 02:39:18.701559 2024] [core:error] [pid 1296666:tid 1296831] [client 47.236.156.253:40406] AH10244: invalid URI path (/cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh)
+[Sat Oct 12 19:19:37.391548 2024] [core:error] [pid 1310664:tid 1310698] [client 14.18.61.201:48650] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Sat Oct 12 19:19:40.331599 2024] [core:error] [pid 1310664:tid 1310702] [client 14.18.61.201:54878] AH10244: invalid URI path (/cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh)
+[Sun Oct 13 00:00:02.242618 2024] [mpm_event:notice] [pid 43832:tid 43832] AH00493: SIGUSR1 received.  Doing graceful restart

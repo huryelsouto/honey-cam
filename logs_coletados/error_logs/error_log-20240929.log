@@ -1,0 +1,87 @@
+[Sun Sep 22 00:00:02.589030 2024] [lbmethod_heartbeat:notice] [pid 43832:tid 43832] AH02282: No slotmem from mod_heartmonitor
+[Sun Sep 22 00:00:02.590008 2024] [systemd:notice] [pid 43832:tid 43832] SELinux policy enabled; httpd running as context system_u:system_r:httpd_t:s0
+[Sun Sep 22 00:00:02.590924 2024] [mpm_event:notice] [pid 43832:tid 43832] AH00489: Apache/2.4.62 (Amazon Linux) configured -- resuming normal operations
+[Sun Sep 22 00:00:02.590939 2024] [core:notice] [pid 43832:tid 43832] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Sun Sep 22 08:33:48.023548 2024] [proxy_fcgi:error] [pid 196255:tid 196416] (70008)Partial results are valid but processing is incomplete: [client 185.91.69.110:59766] AH01075: Error dispatching request to : (reading input brigade)
+[Sun Sep 22 11:06:22.685492 2024] [cgid:error] [pid 209488:tid 209518] [client 185.224.128.83:35634] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Sun Sep 22 11:06:22.849584 2024] [cgid:error] [pid 196255:tid 196419] [client 185.224.128.83:35638] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Sun Sep 22 19:44:02.614041 2024] [cgid:error] [pid 209488:tid 209517] [client 185.224.128.83:40176] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Sun Sep 22 19:44:02.779544 2024] [cgid:error] [pid 196255:tid 196428] [client 185.224.128.83:40178] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Mon Sep 23 00:38:47.967686 2024] [cgid:error] [pid 209488:tid 209539] [client 45.148.10.242:57526] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Mon Sep 23 03:51:41.903445 2024] [cgid:error] [pid 209488:tid 209518] [client 92.249.48.213:57392] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Mon Sep 23 03:51:42.075255 2024] [cgid:error] [pid 196255:tid 196416] [client 92.249.48.213:57394] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Mon Sep 23 03:52:34.012538 2024] [cgid:error] [pid 209488:tid 209516] [client 185.224.128.83:54210] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Mon Sep 23 03:52:34.179781 2024] [cgid:error] [pid 196255:tid 196419] [client 185.224.128.83:54220] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Mon Sep 23 08:52:17.996719 2024] [cgid:error] [pid 209488:tid 209524] [client 185.224.128.59:42046] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Mon Sep 23 08:52:18.155735 2024] [cgid:error] [pid 196255:tid 196419] [client 185.224.128.59:42052] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Mon Sep 23 12:19:45.031325 2024] [cgid:error] [pid 209488:tid 209526] [client 185.224.128.83:38592] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Mon Sep 23 12:19:47.109452 2024] [cgid:error] [pid 209488:tid 209527] [client 185.224.128.83:38622] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Mon Sep 23 20:22:39.993958 2024] [core:error] [pid 209488:tid 209520] [client 213.136.68.154:36790] AH10244: invalid URI path (/../js/login.js)
+[Mon Sep 23 20:22:40.467107 2024] [core:error] [pid 196255:tid 196422] [client 213.136.68.154:36788] AH10244: invalid URI path (/../js/brand.js)
+[Mon Sep 23 20:34:58.888093 2024] [cgid:error] [pid 209488:tid 209526] [client 185.224.128.83:55430] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Mon Sep 23 20:34:59.059289 2024] [cgid:error] [pid 196255:tid 196424] [client 185.224.128.83:55442] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Tue Sep 24 03:20:48.067145 2024] [cgid:error] [pid 209488:tid 209529] [client 185.224.128.59:40698] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Tue Sep 24 03:20:48.243042 2024] [cgid:error] [pid 196255:tid 196410] [client 185.224.128.59:40708] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Tue Sep 24 04:41:19.829205 2024] [cgid:error] [pid 209488:tid 209524] [client 185.224.128.83:36830] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Tue Sep 24 04:41:20.021401 2024] [cgid:error] [pid 196255:tid 196421] [client 185.224.128.83:36846] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Tue Sep 24 12:27:40.409318 2024] [cgid:error] [pid 209488:tid 209540] [client 185.224.128.83:49486] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Tue Sep 24 12:27:41.362039 2024] [cgid:error] [pid 209488:tid 209519] [client 185.224.128.83:49492] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Tue Sep 24 19:25:00.314750 2024] [cgid:error] [pid 209488:tid 209528] [client 185.224.128.83:44242] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Tue Sep 24 19:25:01.567292 2024] [cgid:error] [pid 209488:tid 209529] [client 185.224.128.83:44256] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Tue Sep 24 23:35:20.842164 2024] [core:error] [pid 209488:tid 209520] [client 43.167.243.110:33340] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Tue Sep 24 23:35:28.352211 2024] [core:error] [pid 209488:tid 209525] [client 43.167.243.110:33502] AH10244: invalid URI path (/cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh)
+[Wed Sep 25 00:05:22.480992 2024] [cgid:error] [pid 209488:tid 209531] [client 185.224.128.59:54230] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Wed Sep 25 00:05:22.650448 2024] [cgid:error] [pid 196255:tid 196408] [client 185.224.128.59:54236] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Wed Sep 25 04:01:56.973403 2024] [cgid:error] [pid 209488:tid 209523] [client 185.224.128.83:52914] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Wed Sep 25 04:01:57.138600 2024] [cgid:error] [pid 196255:tid 196418] [client 185.224.128.83:52926] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Wed Sep 25 11:27:44.545418 2024] [cgid:error] [pid 209488:tid 209531] [client 185.224.128.83:34582] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Wed Sep 25 11:27:44.715328 2024] [cgid:error] [pid 196255:tid 196426] [client 185.224.128.83:34588] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Wed Sep 25 12:50:39.161777 2024] [cgid:error] [pid 209488:tid 209539] [client 185.224.128.59:46702] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Wed Sep 25 12:50:39.331226 2024] [cgid:error] [pid 196255:tid 196405] [client 185.224.128.59:46712] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Wed Sep 25 15:57:37.874444 2024] [cgid:error] [pid 209488:tid 209532] [client 45.148.10.242:41278] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Wed Sep 25 18:56:13.630556 2024] [cgid:error] [pid 209488:tid 209534] [client 185.224.128.59:51648] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Wed Sep 25 18:56:13.800165 2024] [cgid:error] [pid 196255:tid 196427] [client 185.224.128.59:51658] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Wed Sep 25 19:29:20.923519 2024] [cgid:error] [pid 209488:tid 209540] [client 185.224.128.83:56592] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Wed Sep 25 19:29:21.653208 2024] [cgid:error] [pid 196255:tid 196406] [client 185.224.128.83:56610] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Thu Sep 26 01:45:17.043972 2024] [cgid:error] [pid 209488:tid 209534] [client 185.224.128.59:42392] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Thu Sep 26 01:45:17.209167 2024] [cgid:error] [pid 196255:tid 196409] [client 185.224.128.59:42394] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Thu Sep 26 03:38:46.157681 2024] [cgid:error] [pid 209488:tid 209531] [client 185.224.128.83:56858] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Thu Sep 26 03:38:46.322633 2024] [cgid:error] [pid 196255:tid 196419] [client 185.224.128.83:56874] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Thu Sep 26 11:48:19.327057 2024] [cgid:error] [pid 209488:tid 209516] [client 185.224.128.83:32816] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Thu Sep 26 11:48:19.498897 2024] [cgid:error] [pid 196255:tid 196407] [client 185.224.128.83:32832] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Thu Sep 26 12:55:56.488827 2024] [cgid:error] [pid 209488:tid 209522] [client 185.224.128.59:44762] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Thu Sep 26 12:55:56.830670 2024] [cgid:error] [pid 196255:tid 196419] [client 185.224.128.59:44766] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Thu Sep 26 20:00:46.409342 2024] [cgid:error] [pid 209488:tid 209539] [client 185.224.128.59:52790] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Thu Sep 26 20:00:46.578950 2024] [cgid:error] [pid 196255:tid 196421] [client 185.224.128.59:52804] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Thu Sep 26 20:12:35.556634 2024] [cgid:error] [pid 209488:tid 209519] [client 185.224.128.83:42040] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Thu Sep 26 20:12:35.725187 2024] [cgid:error] [pid 196255:tid 196423] [client 185.224.128.83:42046] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Fri Sep 27 02:17:51.504226 2024] [cgid:error] [pid 209488:tid 209530] [client 185.224.128.59:49702] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Fri Sep 27 02:17:51.674167 2024] [cgid:error] [pid 196255:tid 196416] [client 185.224.128.59:49704] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Fri Sep 27 03:48:09.434457 2024] [cgid:error] [pid 209488:tid 209526] [client 185.224.128.83:44646] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Fri Sep 27 03:48:09.604148 2024] [cgid:error] [pid 196255:tid 196425] [client 185.224.128.83:44650] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Fri Sep 27 11:53:11.592770 2024] [core:error] [pid 209488:tid 209520] [client 144.126.142.59:37986] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Fri Sep 27 11:53:13.175884 2024] [core:error] [pid 209488:tid 209526] [client 144.126.142.59:37988] AH10244: invalid URI path (/cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh)
+[Fri Sep 27 12:00:37.309807 2024] [cgid:error] [pid 209488:tid 209525] [client 185.224.128.83:48310] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Fri Sep 27 12:00:37.479790 2024] [cgid:error] [pid 196255:tid 196421] [client 185.224.128.83:53430] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Fri Sep 27 12:16:43.409844 2024] [cgid:error] [pid 209488:tid 209523] [client 95.214.55.43:35022] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Fri Sep 27 12:33:31.176736 2024] [cgid:error] [pid 209488:tid 209530] [client 185.224.128.59:32784] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Fri Sep 27 12:33:31.340722 2024] [cgid:error] [pid 196255:tid 196423] [client 185.224.128.59:32794] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Fri Sep 27 15:17:13.393877 2024] [cgid:error] [pid 209488:tid 209526] [client 193.32.162.34:55668] AH01264: stderr from /var/www/cgi-bin/index.cgi: script not found or unable to stat
+[Fri Sep 27 16:40:04.513478 2024] [core:error] [pid 209488:tid 209531] [client 116.55.72.22:11965] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Fri Sep 27 16:40:05.073190 2024] [core:error] [pid 196255:tid 196418] [client 116.55.72.22:26465] AH10244: invalid URI path (/cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh)
+[Fri Sep 27 19:41:38.332098 2024] [cgid:error] [pid 209488:tid 209529] [client 185.224.128.83:54440] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Fri Sep 27 19:41:38.907180 2024] [cgid:error] [pid 209488:tid 209530] [client 185.224.128.83:54468] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Sat Sep 28 01:43:08.064046 2024] [cgid:error] [pid 209488:tid 209529] [client 185.224.128.83:38936] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Sat Sep 28 01:43:15.594993 2024] [cgid:error] [pid 196255:tid 196423] [client 185.224.128.83:38942] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Sat Sep 28 07:24:29.667992 2024] [cgid:error] [pid 209488:tid 209539] [client 185.224.128.59:50494] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Sat Sep 28 07:24:29.831755 2024] [cgid:error] [pid 196255:tid 196421] [client 185.224.128.59:50500] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Sat Sep 28 09:08:05.798595 2024] [cgid:error] [pid 209488:tid 209531] [client 185.224.128.83:36876] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Sat Sep 28 09:08:05.957941 2024] [cgid:error] [pid 196255:tid 196418] [client 185.224.128.83:36890] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Sat Sep 28 12:16:36.368769 2024] [cgid:error] [pid 209488:tid 209530] [client 95.214.55.43:55538] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Sat Sep 28 14:33:49.282534 2024] [cgid:error] [pid 209488:tid 209534] [client 185.224.128.59:37152] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Sat Sep 28 14:33:49.446784 2024] [cgid:error] [pid 196255:tid 196407] [client 185.224.128.59:37156] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Sat Sep 28 18:22:41.590479 2024] [cgid:error] [pid 209488:tid 209526] [client 185.224.128.83:57682] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Sat Sep 28 18:22:43.207002 2024] [cgid:error] [pid 209488:tid 209524] [client 185.224.128.83:57702] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Sat Sep 28 20:57:57.737817 2024] [cgid:error] [pid 209488:tid 209535] [client 95.214.55.43:53826] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Sat Sep 28 23:06:29.443764 2024] [cgid:error] [pid 209488:tid 209524] [client 185.224.128.67:43710] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Sun Sep 29 00:00:01.052957 2024] [mpm_event:notice] [pid 43832:tid 43832] AH00493: SIGUSR1 received.  Doing graceful restart

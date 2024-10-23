@@ -1,0 +1,48 @@
+[Sun Sep 29 00:00:01.116457 2024] [lbmethod_heartbeat:notice] [pid 43832:tid 43832] AH02282: No slotmem from mod_heartmonitor
+[Sun Sep 29 00:00:01.117357 2024] [systemd:notice] [pid 43832:tid 43832] SELinux policy enabled; httpd running as context system_u:system_r:httpd_t:s0
+[Sun Sep 29 00:00:01.118304 2024] [mpm_event:notice] [pid 43832:tid 43832] AH00489: Apache/2.4.62 (Amazon Linux) configured -- resuming normal operations
+[Sun Sep 29 00:00:01.118320 2024] [core:notice] [pid 43832:tid 43832] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Sun Sep 29 01:52:09.109395 2024] [cgid:error] [pid 750011:tid 750062] [client 185.224.128.83:54892] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Sun Sep 29 01:52:09.277459 2024] [cgid:error] [pid 747649:tid 747792] [client 185.224.128.83:54906] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Sun Sep 29 06:02:10.825681 2024] [core:error] [pid 750011:tid 750054] [client 154.213.184.15:51266] AH10244: invalid URI path (/cgi-bin/.%%%%32%%65/.%%%%32%%65/.%%%%32%%65/.%%%%32%%65/.%%%%32%%65/bin/sh)
+[Sun Sep 29 10:17:17.558506 2024] [cgid:error] [pid 750011:tid 750042] [client 185.224.128.83:52618] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Sun Sep 29 10:17:17.724762 2024] [cgid:error] [pid 747649:tid 747795] [client 185.224.128.83:52624] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Sun Sep 29 14:57:10.937176 2024] [cgid:error] [pid 750011:tid 750062] [client 185.224.128.67:43556] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Sun Sep 29 18:32:15.380389 2024] [core:error] [pid 750011:tid 750055] [client 144.22.192.181:57882] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Sun Sep 29 18:32:16.770504 2024] [core:error] [pid 750011:tid 750057] [client 144.22.192.181:32932] AH10244: invalid URI path (/cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh)
+[Sun Sep 29 19:25:45.092504 2024] [cgid:error] [pid 750011:tid 750058] [client 185.224.128.83:42520] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Sun Sep 29 19:25:46.430208 2024] [cgid:error] [pid 750011:tid 750059] [client 185.224.128.83:42526] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Sun Sep 29 20:57:00.526559 2024] [core:error] [pid 750011:tid 750060] [client 85.190.243.5:45118] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Sun Sep 29 20:57:02.439924 2024] [core:error] [pid 750011:tid 750062] [client 85.190.243.5:45130] AH10244: invalid URI path (/cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh)
+[Mon Sep 30 02:50:08.665541 2024] [cgid:error] [pid 750011:tid 750062] [client 185.224.128.83:38282] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Mon Sep 30 02:50:08.842317 2024] [cgid:error] [pid 747649:tid 747784] [client 185.224.128.83:38284] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Mon Sep 30 03:05:24.487707 2024] [cgid:error] [pid 750011:tid 750044] [client 185.224.128.59:58496] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Mon Sep 30 03:05:24.658195 2024] [cgid:error] [pid 747649:tid 747786] [client 185.224.128.59:58506] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Mon Sep 30 10:43:52.198029 2024] [cgid:error] [pid 750011:tid 750060] [client 95.214.55.43:45560] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Mon Sep 30 13:31:45.838127 2024] [cgid:error] [pid 750011:tid 750053] [client 185.224.128.59:39052] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Mon Sep 30 16:37:17.322291 2024] [cgid:error] [pid 750011:tid 750053] [client 185.224.128.83:45370] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Mon Sep 30 18:56:28.133781 2024] [cgid:error] [pid 750011:tid 750054] [client 185.224.128.67:34034] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Mon Sep 30 20:08:12.063537 2024] [cgid:error] [pid 750011:tid 750039] [client 95.214.55.43:43742] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Tue Oct 01 00:50:25.267252 2024] [cgid:error] [pid 750011:tid 750048] [client 185.224.128.59:41730] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Tue Oct 01 06:28:31.168668 2024] [cgid:error] [pid 750011:tid 750059] [client 95.214.55.43:35328] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Tue Oct 01 12:35:51.882875 2024] [cgid:error] [pid 750011:tid 750049] [client 45.148.10.242:41772] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Tue Oct 01 13:07:08.798693 2024] [cgid:error] [pid 750011:tid 750055] [client 185.224.128.59:60338] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Tue Oct 01 20:41:34.363028 2024] [core:error] [pid 750011:tid 750056] [client 117.186.238.82:50126] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Tue Oct 01 20:41:34.940049 2024] [core:error] [pid 747649:tid 747782] [client 117.186.238.82:52428] AH10244: invalid URI path (/cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh)
+[Tue Oct 01 21:49:14.066279 2024] [core:error] [pid 750011:tid 750057] [client 117.186.238.82:57038] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Tue Oct 01 21:49:15.198230 2024] [core:error] [pid 750011:tid 750059] [client 117.186.238.82:57788] AH10244: invalid URI path (/cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh)
+[Wed Oct 02 11:42:48.525641 2024] [cgid:error] [pid 750011:tid 750053] [client 185.224.128.59:50758] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Thu Oct 03 05:05:03.831081 2024] [core:error] [pid 750011:tid 750039] [client 165.232.183.195:47334] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Thu Oct 03 05:05:04.395704 2024] [core:error] [pid 747649:tid 747792] [client 165.232.183.195:47338] AH10244: invalid URI path (/cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh)
+[Thu Oct 03 10:22:57.962919 2024] [cgid:error] [pid 750011:tid 750055] [client 167.235.49.116:47394] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Thu Oct 03 10:22:58.267182 2024] [cgid:error] [pid 747649:tid 747789] [client 167.235.49.116:47402] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Fri Oct 04 00:36:26.321997 2024] [core:error] [pid 750011:tid 750042] [client 117.186.238.82:46074] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Fri Oct 04 00:36:27.708796 2024] [core:error] [pid 750011:tid 750047] [client 117.186.238.82:47070] AH10244: invalid URI path (/cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh)
+[Fri Oct 04 02:30:21.099922 2024] [cgid:error] [pid 747649:tid 747776] [client 142.93.162.193:29032] AH01264: stderr from /var/www/cgi-bin/authLogin.cgi: script not found or unable to stat
+[Fri Oct 04 04:36:16.807116 2024] [core:error] [pid 750011:tid 750045] [client 123.207.22.120:40756] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Fri Oct 04 04:36:48.412817 2024] [core:error] [pid 750011:tid 750046] [client 123.207.22.120:41446] AH10244: invalid URI path (/cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh)
+[Fri Oct 04 19:49:53.549694 2024] [core:error] [pid 750011:tid 750058] [client 45.118.144.54:46080] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Fri Oct 04 19:49:54.022876 2024] [core:error] [pid 747649:tid 747789] [client 45.118.144.54:55934] AH10244: invalid URI path (/cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh)
+[Sat Oct 05 00:44:35.486888 2024] [cgid:error] [pid 750011:tid 750049] [client 192.207.23.2:40668] AH01264: stderr from /var/www/cgi-bin/login.cgi: script not found or unable to stat
+[Sat Oct 05 18:54:51.617916 2024] [cgid:error] [pid 750011:tid 750040] [client 185.224.128.83:50830] AH01264: stderr from /var/www/cgi-bin/luci: script not found or unable to stat
+[Sun Oct 06 00:00:04.194084 2024] [mpm_event:notice] [pid 43832:tid 43832] AH00493: SIGUSR1 received.  Doing graceful restart
