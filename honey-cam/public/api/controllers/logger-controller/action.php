@@ -19,11 +19,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SERVER['CONTENT_TYPE']) && 
         $currentDate = date('Y-m-d');
         
         // Define o caminho do arquivo de logs com base na data
-        $logFileName = __DIR__ . "/../../../../logs/log_$currentDate.json";
+        $logFileName = __DIR__ . "/../../../logs/log_$currentDate.json";
 
         // Verifica se o diretório "logs" existe, se não, cria
-        if (!is_dir(__DIR__ . "/../../../../logs")) {
-            mkdir(__DIR__ . "/../../../../logs", 0755, true); // Cria o diretório com permissões adequadas
+        if (!is_dir(__DIR__ . "/../../../logs")) {
+            mkdir(__DIR__ . "/../../../logs", 0755, true); // Cria o diretório com permissões adequadas
         }
 
         // Inicializa o array de logs
