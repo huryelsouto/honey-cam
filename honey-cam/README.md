@@ -15,4 +15,30 @@ Este é um projeto inicial configurado para rodar um servidor Apache com fronten
 2. Coloque o projeto na raiz do servidor Apache (`/var/www/html/` ou conforme a configuração).
 3. Acesse `http://localhost/meu_projeto_apache/public/` no navegador para ver o frontend.
 4. Clique no botão "Obter Dados" para interagir com o backend PHP.
+
+```shell
+gcloud compute ssh honeypot-test-04 --zone=southamerica-east1-a
+```
+
+```shell
+sudo rm /var/www/html/index.html && \
+sudo mkdir -p /var/www/html/logs && \
+sudo chown -R www-data:www-data /var/www/html/logs && \
+sudo tee /etc/apache2/sites-available/000-default.conf > /dev/null <<EOF
+<VirtualHost *:80>
+        ServerAdmin webmaster@localhost
+        DocumentRoot /var/www/html
+
+        ErrorLog \${APACHE_LOG_DIR}/error.log
+        CustomLog \${APACHE_LOG_DIR}/access.log combined
+
+        <Directory /var/www/html>
+                AllowOverride All
+                Require all granted
+        </Directory>
+</VirtualHost>
+EOF
+sudo a2enmod rewrite && \
+sudo systemctl restart apache2
+```
     

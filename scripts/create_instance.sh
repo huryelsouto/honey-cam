@@ -127,15 +127,8 @@ setup_instance() {
         sudo chmod 644 /var/www/html/index.php &&
         sudo chmod -R 755 /var/www/html &&
         echo '<IfModule mod_dir.c>
-    DirectoryIndex index.php index.html
-</IfModule>' | sudo tee /etc/apache2/mods-enabled/dir.conf &&
-        echo '<Directory /var/www/html>
-    AllowOverride All
-    Require all granted
-</Directory>' | sudo tee -a /etc/apache2/sites-available/000-default.conf &&
-        sudo rm /var/www/html/index.html &&
-        sudo a2enmod rewrite &&
-        sudo systemctl restart apache2
+                DirectoryIndex index.php index.html
+            </IfModule>' | sudo tee /etc/apache2/mods-enabled/dir.conf
     "
 }
 
