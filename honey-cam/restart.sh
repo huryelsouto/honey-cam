@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/local/bin/bash
 
 # Exibe e executa o comando para parar o Apache
 echo "Parando Apache..."

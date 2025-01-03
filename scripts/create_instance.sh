@@ -1,16 +1,25 @@
-#!/bin/bash
+#!/usr/local/bin/bash
 
-# Variáveis
-PROJECT_ID="tcchuryel"
-ZONE="southamerica-east1-a"
-INSTANCE_NAME="honeypot-test-10"
-MACHINE_TYPE="e2-small"
-DISK_SIZE="10"
-IMAGE_FAMILY="ubuntu-2004-lts"
-IMAGE_PROJECT="ubuntu-os-cloud"
-FIREWALL_RULE="honeypot-http-firewall"
-PROJECT_ZIP_LOCAL_PATH="../honey-cam.zip"
-PROJECT_FOLDER_NAME="honey-cam"
+# Verificar parâmetros obrigatórios
+if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
+    echo "Erro: Os parâmetros PROJECT_ID, ZONE e INSTANCE_NAME são obrigatórios."
+    echo "Uso: $0 <PROJECT_ID> <ZONE> <INSTANCE_NAME> [MACHINE_TYPE] [DISK_SIZE] [IMAGE_FAMILY] [IMAGE_PROJECT] [FIREWALL_RULE] [PROJECT_ZIP_LOCAL_PATH] [PROJECT_FOLDER_NAME]"
+    exit 1
+fi
+
+# Variáveis obrigatórias
+PROJECT_ID="$1"
+ZONE="$2"
+INSTANCE_NAME="$3"
+
+# Variáveis opcionais com valores padrão
+MACHINE_TYPE="${4:-e2-small}"
+DISK_SIZE="${5:-10}"
+IMAGE_FAMILY="${6:-ubuntu-2004-lts}"
+IMAGE_PROJECT="${7:-ubuntu-os-cloud}"
+FIREWALL_RULE="${8:-honeypot-http-firewall}"
+PROJECT_ZIP_LOCAL_PATH="${9:-../honey-cam.zip}"
+PROJECT_FOLDER_NAME="${10:-honey-cam}"
 
 # Gerar chave SSH (se não existir)
 setup_ssh_keys() {

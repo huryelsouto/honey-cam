@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/local/bin/bash
 
 # Diretório onde os logs estão armazenados
 logsDirectory="/Users/huryelsouto/Documents/faculdade/honey-cam/logs_coletados/access_logs"

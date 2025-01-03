@@ -17,10 +17,14 @@ Este é um projeto inicial configurado para rodar um servidor Apache com fronten
 4. Clique no botão "Obter Dados" para interagir com o backend PHP.
 
 ```shell
-gcloud compute ssh honeypot-test-04 --zone=southamerica-east1-a
+conectar ao honeycam
+
+gcloud compute ssh <honeypot-name> --zone=<zone>
 ```
 
 ```shell
+terminar a configuração do honeycam
+
 sudo rm /var/www/html/index.html && \
 sudo mkdir -p /var/www/html/logs && \
 sudo chown -R www-data:www-data /var/www/html/logs && \
@@ -41,4 +45,19 @@ EOF
 sudo a2enmod rewrite && \
 sudo systemctl restart apache2
 ```
-    
+
+```shell
+conferir os logs após eu entrar
+
+ls /var/www/html/logs/
+cat /var/www/html/logs/log_2025-01-03.json 
+cat /var/log/apache2/access.log
+cat /var/log/apache2/error.log
+
+
+```
+```shell
+limpar os logs após eu entrar
+
+sudo truncate -s 0 /var/log/apache2/access.log && sudo truncate -s 0 /var/log/apache2/error.log && sudo rm /var/www/html/logs/*
+```
