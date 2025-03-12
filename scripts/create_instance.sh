@@ -1,40 +1,40 @@
 #!/usr/local/bin/bash
 
-# Verificar parâmetros obrigatórios
+# Check for mandatory parameters
 if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
-    echo "Erro: Os parâmetros PROJECT_ID, ZONE e INSTANCE_NAME são obrigatórios."
-    echo "Uso: $0 <PROJECT_ID> <ZONE> <INSTANCE_NAME> [MACHINE_TYPE] [DISK_SIZE] [IMAGE_FAMILY] [IMAGE_PROJECT] [FIREWALL_RULE] [PROJECT_ZIP_LOCAL_PATH] [PROJECT_FOLDER_NAME]"
+    echo "Error: PROJECT_ID, ZONE, and INSTANCE_NAME are required parameters."
+    echo "Usage: $0 <PROJECT_ID> <ZONE> <INSTANCE_NAME> [MACHINE_TYPE] [DISK_SIZE] [IMAGE_FAMILY] [IMAGE_PROJECT] [FIREWALL_RULE] [PROJECT_ZIP_LOCAL_PATH] [PROJECT_FOLDER_NAME]"
     exit 1
 fi
 
-# Variáveis obrigatórias
+# Mandatory variables
 PROJECT_ID="$1"
 ZONE="$2"
 INSTANCE_NAME="$3"
 
-# Variáveis opcionais com valores padrão
+# Optional variables with default values
 MACHINE_TYPE="${4:-e2-small}"
 DISK_SIZE="${5:-10}"
 IMAGE_FAMILY="${6:-ubuntu-2004-lts}"
 IMAGE_PROJECT="${7:-ubuntu-os-cloud}"
 FIREWALL_RULE="${8:-honeypot-http-firewall}"
-PROJECT_ZIP_LOCAL_PATH="${9:-../honey-cam.zip}"
-PROJECT_FOLDER_NAME="${10:-honey-cam}"
+PROJECT_FOLDER_NAME="${9:-honey-cam}"
+PROJECT_ZIP_LOCAL_PATH="${10:-../$PROJECT_FOLDER_NAME.zip}"
 
-# Gerar chave SSH (se não existir)
+# Generate SSH key if it doesn't exist
 setup_ssh_keys() {
-    echo "Verificando chave SSH para o gcloud..."
+    echo "Checking SSH key for gcloud..."
     if [ ! -f ~/.ssh/google_compute_engine ]; then
-        echo "Gerando chave SSH..."
+        echo "Generating SSH key..."
         gcloud compute ssh $INSTANCE_NAME --dry-run --zone=$ZONE > /dev/null 2>&1
     else
-        echo "Chave SSH já existente."
+        echo "SSH key already exists."
     fi
 }
 
-# Criar instância
+# Create instance
 create_instance() {
-    echo "Criando instância $INSTANCE_NAME..."
+    echo "Creating instance $INSTANCE_NAME..."
     curl -X POST \
         -H "Authorization: Bearer $(gcloud auth print-access-token)" \
         -H "Content-Type: application/json" \
@@ -69,13 +69,13 @@ create_instance() {
         }"
 }
 
-# Verificar regra de firewall para HTTP
+# Check and create HTTP firewall rule
 check_firewall_rule() {
-    echo "Verificando regra de firewall $FIREWALL_RULE..."
+    echo "Checking HTTP firewall rule $FIREWALL_RULE..."
     if gcloud compute firewall-rules describe $FIREWALL_RULE --project=$PROJECT_ID > /dev/null 2>&1; then
-        echo "Regra de firewall $FIREWALL_RULE já existe. Pulando criação."
+        echo "HTTP firewall rule $FIREWALL_RULE already exists. Skipping creation."
     else
-        echo "Criando regra de firewall $FIREWALL_RULE..."
+        echo "Creating HTTP firewall rule $FIREWALL_RULE..."
         gcloud compute firewall-rules create $FIREWALL_RULE \
             --project=$PROJECT_ID \
             --allow=tcp:80 \
@@ -85,13 +85,13 @@ check_firewall_rule() {
     fi
 }
 
-# Verificar regra de firewall para SSH
+# Check and create SSH firewall rule
 check_firewall_rule_ssh() {
-    echo "Verificando regra de firewall para SSH..."
+    echo "Checking SSH firewall rule..."
     if gcloud compute firewall-rules describe allow-ssh --project=$PROJECT_ID > /dev/null 2>&1; then
-        echo "Regra de firewall para SSH já existe. Pulando criação."
+        echo "SSH firewall rule already exists. Skipping creation."
     else
-        echo "Criando regra de firewall para SSH..."
+        echo "Creating SSH firewall rule..."
         gcloud compute firewall-rules create allow-ssh \
             --project=$PROJECT_ID \
             --allow=tcp:22 \
@@ -101,37 +101,37 @@ check_firewall_rule_ssh() {
     fi
 }
 
-# Aguardar inicialização do SSH
+# Wait for SSH to be available
 wait_for_ssh() {
-    echo "Aguardando o SSH ficar disponível na instância..."
+    echo "Waiting for SSH to be available on the instance..."
     for i in {1..10}; do
         if gcloud compute ssh $INSTANCE_NAME --zone=$ZONE --command="exit" > /dev/null 2>&1; then
-            echo "SSH está disponível!"
+            echo "SSH is now available!"
             return 0
         fi
-        echo "Tentativa $i: SSH ainda não disponível. Aguardando..."
+        echo "Attempt $i: SSH not yet available. Waiting..."
         sleep 15
     done
-    echo "Falha ao conectar via SSH após várias tentativas."
+    echo "Failed to connect to SSH after multiple attempts."
     exit 1
 }
 
-# Configurar instância
+# Configure instance
 setup_instance() {
-    echo "Esperando instância inicializar..."
+    echo "Waiting for instance to initialize..."
     wait_for_ssh
 
-    echo "Enviando projeto para a instância..."
+    echo "Uploading project to the instance..."
     gcloud compute scp $PROJECT_ZIP_LOCAL_PATH $INSTANCE_NAME:~/ --zone=$ZONE
 
-    echo "Configurando servidor Apache, PHP, .htaccess e deploy do projeto..."
+    echo "Setting up Apache server, PHP, .htaccess, and deploying the project..."
     gcloud compute ssh $INSTANCE_NAME --zone=$ZONE --command="
         sudo apt update &&
         sudo apt install apache2 php libapache2-mod-php unzip -y &&
         sudo systemctl enable apache2 &&
         sudo systemctl start apache2 &&
-        unzip ~/honey-cam.zip -d ~/ &&
-        sudo mv ~/honey-cam/public/* ~/honey-cam/public/.* /var/www/html/ &&
+        unzip ~/$PROJECT_FOLDER_NAME.zip -d ~/ &&
+        sudo mv ~/$PROJECT_FOLDER_NAME/public/* ~/$PROJECT_FOLDER_NAME/public/.* /var/www/html/ &&
         sudo rm /var/www/html/index.html &&
         sudo chmod 644 /var/www/html/index.php &&
         sudo chmod -R 755 /var/www/html &&
@@ -141,25 +141,25 @@ setup_instance() {
     "
 }
 
-# Função principal
+# Main function
 main() {
-    echo "Iniciando configuração do honeypot..."
+    echo "Starting honeypot configuration..."
 
-    # Garantir que a chave SSH existe
+    # Ensure SSH key exists
     setup_ssh_keys
 
-    # Criar instância
+    # Create instance
     create_instance
 
-    # Configurar firewall
+    # Configure firewall
     check_firewall_rule
     check_firewall_rule_ssh
 
-    # Configurar a instância e o projeto
+    # Configure the instance and project
     setup_instance
 
-    echo "Configuração concluída com sucesso!"
+    echo "Configuration completed successfully!"
 }
 
-# Executar o script
+# Execute the script
 main

@@ -1,6 +1,6 @@
 #!/usr/local/bin/bash
 
-# Localizações e zonas correspondentes
+# Locations and corresponding zones
 declare -A LOCATIONS
 LOCATIONS=(
     ["sao-paulo"]="southamerica-east1-a"
@@ -17,15 +17,15 @@ LOCATIONS=(
     ["sydney"]="australia-southeast1-a"
 )
 
-# Loop pelas localizações
+# Loop through the locations
 for LOCATION in "${!LOCATIONS[@]}"; do
     ZONE="${LOCATIONS[$LOCATION]}"
-    INSTANCE_NAME="honeycam-${LOCATION}" # Nome da instância com a chave do array
-    echo "Criando instância $INSTANCE_NAME na zona $ZONE..."
+    INSTANCE_NAME="honeycam-${LOCATION}" # Instance name with the array key
+    echo "Creating instance $INSTANCE_NAME in zone $ZONE..."
 
     ./create_instance.sh "tcchuryel" "$ZONE" "$INSTANCE_NAME" &
 done
 
-# Aguardar finalização de todos os processos em paralelo
+# Wait for all parallel processes to finish
 wait
-echo "Todas as instâncias foram criadas!"
+echo "All instances have been created!"
