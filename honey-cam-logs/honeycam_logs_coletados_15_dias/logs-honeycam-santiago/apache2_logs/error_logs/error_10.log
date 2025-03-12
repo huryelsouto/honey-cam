@@ -1,0 +1,4 @@
+[Thu Jan 09 00:00:04.677868 2025] [mpm_prefork:notice] [pid 9862] AH00163: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Thu Jan 09 00:00:04.677908 2025] [core:notice] [pid 9862] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jan 09 20:24:02.818394 2025] [core:error] [pid 49520] [client 45.156.129.128:54185] AH00126: Invalid URI in request HEAD /icons/.%2e/%2e%2e/apache2/icons/sphere1.png HTTP/1.1
+[Fri Jan 10 00:00:03.957971 2025] [mpm_prefork:notice] [pid 9862] AH00171: Graceful restart requested, doing restart

@@ -1,0 +1,4 @@
+[Tue Jan 14 00:00:10.531889 2025] [mpm_prefork:notice] [pid 10004] AH00163: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Tue Jan 14 00:00:10.531924 2025] [core:notice] [pid 10004] AH00094: Command line: '/usr/sbin/apache2'
+[Tue Jan 14 19:14:08.828971 2025] [authz_core:error] [pid 110298] [client 35.216.172.13:34818] AH01630: client denied by server configuration: /var/www/html/server-status
+[Wed Jan 15 00:00:14.205350 2025] [mpm_prefork:notice] [pid 10004] AH00171: Graceful restart requested, doing restart

@@ -20,6 +20,23 @@ Este é um projeto inicial configurado para rodar um servidor Apache com fronten
 conectar ao honeycam
 
 gcloud compute ssh <honeypot-name> --zone=<zone>
+
+# gcloud compute ssh honeycam-sao-paulo --zone=southamerica-east1-a
+# gcloud compute ssh honeycam-tel-aviv --zone=me-west1-a
+# gcloud compute ssh honeycam-santiago --zone=southamerica-west1-a
+# gcloud compute ssh honeycam-mumbai --zone=asia-south1-a
+# gcloud compute ssh honeycam-los-angeles --zone=us-west2-a
+# gcloud compute ssh honeycam-hong-kong --zone=asia-east2-a
+# gcloud compute ssh honeycam-norte-da-virginia --zone=us-east4-a
+# gcloud compute ssh honeycam-tokyo --zone=asia-northeast1-a
+# gcloud compute ssh honeycam-paris --zone=europe-west9-a
+# gcloud compute ssh honeycam-singapura --zone=asia-southeast1-a
+# gcloud compute ssh honeycam-frankfurt --zone=europe-west3-a
+# gcloud compute ssh honeycam-sydney --zone=australia-southeast1-a
+
+# gcloud compute ssh honeypot-teste02 --zone=southamerica-east1-a
+# gcloud compute ssh honeypot-teste03 --zone=southamerica-east1-a
+
 ```
 
 ```shell
@@ -49,10 +66,7 @@ sudo systemctl restart apache2
 ```shell
 conferir os logs após eu entrar
 
-ls /var/www/html/logs/
-cat /var/www/html/logs/log_2025-01-03.json 
-cat /var/log/apache2/access.log
-cat /var/log/apache2/error.log
+ls /var/www/html/logs/ && cat /var/log/apache2/access.log && cat /var/log/apache2/error.log
 
 
 ```

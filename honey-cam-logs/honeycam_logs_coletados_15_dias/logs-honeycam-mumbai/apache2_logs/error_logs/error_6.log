@@ -1,0 +1,6 @@
+[Mon Jan 13 00:00:06.406815 2025] [mpm_prefork:notice] [pid 9850] AH00163: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Mon Jan 13 00:00:06.406862 2025] [core:notice] [pid 9850] AH00094: Command line: '/usr/sbin/apache2'
+[Mon Jan 13 01:06:40.887335 2025] [core:error] [pid 139453] [client 70.32.84.96:39818] AH00126: Invalid URI in request POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh HTTP/1.1
+[Mon Jan 13 07:23:20.793123 2025] [core:error] [pid 139044] [client 209.145.53.161:56894] AH00126: Invalid URI in request POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh HTTP/1.1
+[Mon Jan 13 18:37:55.914938 2025] [authz_core:error] [pid 139452] [client 5.101.0.66:47667] AH01630: client denied by server configuration: /var/www/html/server-status
+[Tue Jan 14 00:00:02.348522 2025] [mpm_prefork:notice] [pid 9850] AH00171: Graceful restart requested, doing restart

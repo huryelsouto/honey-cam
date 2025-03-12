@@ -1,0 +1,4 @@
+[Thu Jan 16 00:00:06.780368 2025] [mpm_prefork:notice] [pid 9850] AH00163: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Thu Jan 16 00:00:06.780418 2025] [core:notice] [pid 9850] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jan 16 13:31:51.871203 2025] [core:error] [pid 189230] [client 78.153.140.224:44304] AH00126: Invalid URI in request GET /../.env HTTP/1.1
+[Fri Jan 17 00:00:06.183070 2025] [mpm_prefork:notice] [pid 9850] AH00171: Graceful restart requested, doing restart

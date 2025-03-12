@@ -1,0 +1,5 @@
+[Sat Jan 04 12:27:27.340202 2025] [core:error] [pid 9841] [client 103.226.248.206:33380] AH00126: Invalid URI in request POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh HTTP/1.1
+[Sun Jan 05 04:26:03.737487 2025] [core:error] [pid 9845] [client 106.13.112.250:26298] AH00126: Invalid URI in request POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh HTTP/1.1
+[Sun Jan 05 10:58:47.714057 2025] [authz_core:error] [pid 9849] [client 5.101.0.66:8330] AH01630: client denied by server configuration: /var/www/html/server-status
+[Sun Jan 05 16:43:05.413917 2025] [core:error] [pid 9848] [client 39.102.208.69:52760] AH00126: Invalid URI in request POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh HTTP/1.1
+[Mon Jan 06 00:00:02.888262 2025] [mpm_prefork:notice] [pid 9840] AH00171: Graceful restart requested, doing restart

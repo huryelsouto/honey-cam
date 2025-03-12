@@ -1,0 +1,5 @@
+[Fri Jan 10 00:00:03.438737 2025] [mpm_prefork:notice] [pid 9857] AH00163: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 10 00:00:03.438764 2025] [core:notice] [pid 9857] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 10 09:24:38.631478 2025] [authz_core:error] [pid 57175] [client 193.41.206.36:37400] AH01630: client denied by server configuration: /var/www/html/.htaccess
+[Fri Jan 10 09:24:50.146523 2025] [core:error] [pid 57175] [client 193.41.206.36:37400] AH00126: Invalid URI in request GET /../js/brand.js HTTP/1.1
+[Sat Jan 11 00:00:03.903821 2025] [mpm_prefork:notice] [pid 9857] AH00171: Graceful restart requested, doing restart

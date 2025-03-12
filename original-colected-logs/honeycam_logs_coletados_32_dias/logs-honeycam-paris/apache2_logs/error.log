@@ -1,0 +1,5 @@
+[Wed Feb 05 00:00:06.733456 2025] [mpm_prefork:notice] [pid 9867] AH00163: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Wed Feb 05 00:00:06.733486 2025] [core:notice] [pid 9867] AH00094: Command line: '/usr/sbin/apache2'
+[Wed Feb 05 12:06:52.532236 2025] [core:error] [pid 583083] [client 47.84.32.163:41596] AH00126: Invalid URI in request POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh HTTP/1.1
+[Wed Feb 05 12:27:02.637045 2025] [core:error] [pid 583081] [client 112.95.227.2:54090] AH00126: Invalid URI in request POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh HTTP/1.1
+[Wed Feb 05 19:46:40.372663 2025] [core:error] [pid 584485] [client 221.182.189.18:44056] AH00126: Invalid URI in request POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh HTTP/1.1

@@ -1,0 +1,4 @@
+[Thu Jan 16 00:00:19.690608 2025] [mpm_prefork:notice] [pid 10004] AH00163: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Thu Jan 16 00:00:19.690645 2025] [core:notice] [pid 10004] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jan 16 21:13:38.319151 2025] [core:error] [pid 134270] [client 130.61.239.224:46660] AH00126: Invalid URI in request POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh HTTP/1.1
+[Fri Jan 17 00:00:19.103390 2025] [mpm_prefork:notice] [pid 10004] AH00171: Graceful restart requested, doing restart

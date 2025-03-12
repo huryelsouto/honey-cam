@@ -1,0 +1,4 @@
+[Wed Feb 05 00:00:17.179776 2025] [mpm_prefork:notice] [pid 9946] AH00163: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Wed Feb 05 00:00:17.179837 2025] [core:notice] [pid 9946] AH00094: Command line: '/usr/sbin/apache2'
+[Wed Feb 05 01:22:11.209673 2025] [authz_core:error] [pid 525896] [client 94.102.49.155:56303] AH01630: client denied by server configuration: /var/www/html/server-status
+[Wed Feb 05 04:23:44.899324 2025] [core:error] [pid 525913] [client 94.102.49.82:21356] AH00126: Invalid URI in request GET /toolbox-resource/../resources/../../configuration/serverconfig.xml HTTP/1.1

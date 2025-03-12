@@ -1,0 +1,2 @@
+[Sun Jan 05 02:20:58.501320 2025] [core:error] [pid 9901] [client 116.142.242.168:60516] AH00126: Invalid URI in request POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh HTTP/1.1
+[Mon Jan 06 00:00:05.787924 2025] [mpm_prefork:notice] [pid 9898] AH00171: Graceful restart requested, doing restart

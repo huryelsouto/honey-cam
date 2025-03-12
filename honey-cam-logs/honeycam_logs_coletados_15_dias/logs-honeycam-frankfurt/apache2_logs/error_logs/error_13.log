@@ -1,0 +1,3 @@
+[Mon Jan 06 00:00:03.481986 2025] [mpm_prefork:notice] [pid 9874] AH00163: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Mon Jan 06 00:00:03.482023 2025] [core:notice] [pid 9874] AH00094: Command line: '/usr/sbin/apache2'
+[Tue Jan 07 00:00:02.493467 2025] [mpm_prefork:notice] [pid 9874] AH00171: Graceful restart requested, doing restart
