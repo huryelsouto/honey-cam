@@ -22,7 +22,7 @@ process_log_file() {
 
     echo "Processing log file: $file_path → $output_html"
 
-    LC_TIME="en_US.UTF-8" goaccess "$file_path" -o "$output_html" --log-format=COMBINED
+    LC_TIME="en_US.UTF-8" goaccess "$file_path" -o "$output_html" --log-format=COMBINED --geoip-database=GeoLite2/GeoLite2-City.mmdb
 
     if [ $? -eq 0 ]; then
         echo "Report generated: $output_html"
